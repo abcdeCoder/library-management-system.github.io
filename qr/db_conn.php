@@ -1,14 +1,14 @@
-<?php  
+<?php
 
-$sname = "localhost";
-$uname = "root";
-$password = "";
+$sname = 'remotemysql.com';
+$uname = 'XnprHCjihw';
+$password = 'wI5aIHBVQ8';
 
-$db_name = "qrcode";
+$db_name = 'XnprHCjihw';
 
 $conn = mysqli_connect($sname, $uname, $password, $db_name);
 
 if (!$conn) {
-	echo "Connection failed!";
-	exit();
+    echo 'Connection failed!';
+    exit();
 }
