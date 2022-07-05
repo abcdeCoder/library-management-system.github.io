@@ -1,16 +1,15 @@
 <?php
-include_once("connection.php");
+include_once 'connection.php';
 $con = connection();
 $output = '';
-if(isset($_POST["submit"]))
-{$s=$_POST['Section'];
- $r=$_POST['Status'];
-$sql = "select * from LMS.book where Section like '%$s%' AND Status like '%$r%'";
-$result = mysqli_query($con,$sql);
-if (mysqli_num_rows($result) > 0 ) {
-	
-}
-$output .='
+if (isset($_POST['submit'])) {
+    $s = $_POST['Section'];
+    $r = $_POST['Status'];
+    $sql = "select * from book where Section like '%$s%' AND Status like '%$r%'";
+    $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+    }
+    $output .= '
 <table class = "table" bordered = "2" style = "border: 2px;">
 								 <thead>
                                     <tr>
@@ -30,30 +29,48 @@ $output .='
 
 ';
 
-while ($row = mysqli_fetch_array($result)) {
-	$output .='
+    while ($row = mysqli_fetch_array($result)) {
+        $output .=
+            '
 									 <tr>
-                                      <td>'.$row["BookId"].'</td>
-                                      <td>'.$row["Section"].'</td>
-                                        <td>'.$row["Subject"].'</td>
-                                        <td>'.$row["Textbook"].'</td>
-                                        <td>'.$row["Volume"].'</td>
-                                      <td>'.$row["Year"].'</td>
-                                        <td>'.$row["Availability"].'</td>
-                                        <td>'.$row["Author"].'</td>
-                                        <td>'.$row["ISBN"].'</td>
-                                        <td>'.$row["Status"].'</td>
+                                      <td>' .
+            $row['BookId'] .
+            '</td>
+                                      <td>' .
+            $row['Section'] .
+            '</td>
+                                        <td>' .
+            $row['Subject'] .
+            '</td>
+                                        <td>' .
+            $row['Textbook'] .
+            '</td>
+                                        <td>' .
+            $row['Volume'] .
+            '</td>
+                                      <td>' .
+            $row['Year'] .
+            '</td>
+                                        <td>' .
+            $row['Availability'] .
+            '</td>
+                                        <td>' .
+            $row['Author'] .
+            '</td>
+                                        <td>' .
+            $row['ISBN'] .
+            '</td>
+                                        <td>' .
+            $row['Status'] .
+            '</td>
                                   			  </tr>
 
 	';
+    }
+    $output .= '</table>';
+    header('Content-Type: Books');
+    header('Content-Disposition:attachment; filename=book.xls');
+    echo $output;
 }
-$output .='</table>';
-header("Content-Type: Books");
-header("Content-Disposition:attachment; filename=book.xls");
-echo $output;
-
-}
-
-
 
 ?>

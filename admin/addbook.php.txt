@@ -235,7 +235,7 @@ $status = $_POST['status'];
  $sql1 = "INSERT INTO `book`( `Section`, `Subject`, `Textbook`, `Volume`, `Year`, `Availability`, `Author`, `ISBN`, `Status`) VALUES ('$Section','$Subject','$book','$Copyright','$Title','$availability','$Author','$ISBN','$status')";
 
 if($conn->query($sql1) === TRUE){
-$sql2="select max(BookId) as x from LMS.book";
+$sql2="select max(BookId) as x from book";
 $result=$conn->query($sql2);
 $row=$result->fetch_assoc();
 // $x=$row['x'];        
