@@ -218,9 +218,7 @@ if ($_SESSION['RollNo']== 'admin' ) {
 
 
 <?php 
-if(0){
 
-}
 else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";
 } 
