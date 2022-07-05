@@ -128,13 +128,13 @@ if ($_SESSION['RollNo']== 'admin' ) {
                                     if(isset($_POST['submit']))
                                         {$s=$_POST['Textbook'];
 
-                                            $sql="select * from LMS.book where Section like '%$s%' OR Textbook like '%$s%' OR Status like '%$s%'";
+                                            $sql="select * from book where Section like '%$s%' OR Textbook like '%$s%' OR Status like '%$s%'";
                                     // $sql = "select * from LMS.book where BookId = '$s' or Textbook like '%s%' ";
                                      // $name=$row['Textbook'];
                                  // $rs = $conn->query($sql);
                                         }
                                     else
-                                        $sql="select * from LMS.book";
+                                        $sql="select * from book";
 
                                     $result=$conn->query($sql);
                                     $rowcount = mysqli_num_rows($result);
