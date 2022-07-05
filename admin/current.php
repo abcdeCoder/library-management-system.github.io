@@ -92,20 +92,20 @@ require 'dbconn.php'; ?>
                     </form>
                     <br>
                     <?php
-                                    if (isset($_POST['submit'])) {
-                                        $s = $_POST['title'];
-                                        $sql = "select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,Date_of_Return,datediff(curdate(),Due_Date) as x from record,book where (Date_of_Issue and Date_of_Return is NULL and book.Bookid = record.BookId) and (RollNo='$s' or record.BookId='$s' or Textbook like '%$s%')";
-                                    } else {
-                                        $sql =
-                                            'select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,Date_of_Return,datediff(curdate(),Due_Date) as x from record,book where Date_of_Issue and Date_of_Return is NULL and book.Bookid = record.BookId';
-                                    }
-                                    $result = $conn->query($sql);
-                                    $rowcount = mysqli_num_rows($result);
+                    if (isset($_POST['submit'])) {
+                        $s = $_POST['title'];
+                        $sql = "select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,Date_of_Return,datediff(curdate(),Due_Date) as x from record,book where (Date_of_Issue and Date_of_Return is NULL and book.Bookid = record.BookId) and (RollNo='$s' or record.BookId='$s' or Textbook like '%$s%')";
+                    } else {
+                        $sql =
+                            'select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,Date_of_Return,datediff(curdate(),Due_Date) as x from record,book where Date_of_Issue and Date_of_Return is NULL and book.Bookid = record.BookId';
+                    }
+                    $result = $conn->query($sql);
+                    $rowcount = mysqli_num_rows($result);
 
-                                    if (!$rowcount) {
-                                        echo '<br><center><h2><b><i>No Results</i></b></h2></center>';
-                                    } else {
-                                         ?>
+                    if (!$rowcount) {
+                        echo '<br><center><h2><b><i>No Results</i></b></h2></center>';
+                    } else {
+                         ?>
                     <form action="excel1.php" method="post" style="float: left;">
                         <input type="submit" name="export_excel" class="btn btn-success" value="Export to Excel">
                     </form>
@@ -149,10 +149,12 @@ require 'dbconn.php'; ?>
                         <tbody>
 
                             <?php //$result=$conn->query($sql);
-                                        //$result=$conn->query($sql);
-                                        ?>while (
-                            $row = $result->fetch_assoc()
-                            ) {
+                        //$result=$conn->query($sql);
+                        ?>//$result=$conn->query($sql);
+                            //$result=$conn->query($sql);
+                            //$result=$conn->query($sql);
+                            //$result=$conn->query($sql);
+                            while ($row = $result->fetch_assoc()) {
 
                             $id = $row['id'];
                             $rollno = $row['RollNo'];
@@ -166,9 +168,7 @@ require 'dbconn.php'; ?>
                             ?>
 
                             <tr>
-                                <td><?php echo strtoupper(
-                                          $rollno
-                                      ); ?></td>
+                                <td><?php echo strtoupper($rollno); ?></td>
 
                                 <td><?php echo $bookid; ?></td>
                                 <td><?php echo $name; ?></td>
@@ -176,12 +176,12 @@ require 'dbconn.php'; ?>
                                 <td><?php echo $duedate; ?></td>
                                 <td><?php echo $return; ?></td>
                                 <td><?php if ($dues > 0) {
-                                          echo "<font color='red'>" .
-                                              $dues .
-                                              '</font>';
-                                      } else {
-                                          echo "<font color='green'>0</font>";
-                                      } ?>
+                                    echo "<font color='red'>" .
+                                        $dues .
+                                        '</font>';
+                                } else {
+                                    echo "<font color='green'>0</font>";
+                                } ?>
 
 
                                 <td>
@@ -203,9 +203,9 @@ require 'dbconn.php'; ?>
 
                             </tr>
                             <?php
-                                }
-                                    }
-                                    ?>
+                            }
+                    }
+                    } ?>
                         </tbody>
                     </table>
                 </div>
@@ -230,10 +230,7 @@ require 'dbconn.php'; ?>
     <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
     <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
     <script src="scripts/common.js" type="text/javascript"></script>
-
 </body>
 
+
 </html>
-
-
-<?php } else {echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";} ?>

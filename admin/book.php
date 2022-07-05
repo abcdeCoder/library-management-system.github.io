@@ -166,16 +166,18 @@ require 'dbconn.php'; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php //$result=$conn->query($sql);
-                                //$result=$conn->query($sql);
+                                <?php
+                        //$result=$conn->query($sql);
+                        //$result=$conn->query($sql);
+                        ?>//$result=$conn->query($sql);
                                 while ($row = $result->fetch_assoc()) {
 
-                                    $bookid = $row['BookId'];
+                                $bookid = $row['BookId'];
 
-                                    $section = $row['Section'];
-                                    $name = $row['Textbook'];
-                                    $avail = $row['Availability'];
-                                    ?>
+                                $section = $row['Section'];
+                                $name = $row['Textbook'];
+                                $avail = $row['Availability'];
+                                ?>
                                 <tr>
                                     <td><?php echo $bookid; ?></td>
                                     <td><?php echo $section; ?></td>
@@ -201,9 +203,8 @@ require 'dbconn.php'; ?>
 
                     </tr>
                     <?php
-                                }
                     }
-                    ?>
+                    } ?>
                     </tbody>
                     </table>
                 </div>
@@ -231,7 +232,3 @@ require 'dbconn.php'; ?>
 </body>
 
 </html>
-
-
-<?php } else {echo "<script type='text/javascript'>alert('Access Denied!!!');</script>";}
-?>
