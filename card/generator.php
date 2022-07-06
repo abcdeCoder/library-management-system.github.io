@@ -22,19 +22,6 @@ if ($rollno == null) {
     echo header('location:../');
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
