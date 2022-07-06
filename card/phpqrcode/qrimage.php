@@ -1,6 +1,6 @@
 <?php
 define('QR_IMAGE', true);
-
+ImageCreate($imgW, $imgH);
 class QRimage
 {
     public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4, $saveandprint = FALSE)
