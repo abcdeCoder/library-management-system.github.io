@@ -1,6 +1,0 @@
-<?php
-	// define configuration settings
-	define("HOST", "https://www.example.com");
-        define("TEMPDIR", "/var/www/html/temp/");
-        define("URLRELDIR", "/temp/");
-	
