@@ -156,10 +156,10 @@ if ($rollno == null) {
                         </thead>
                         <tbody>
                             <?php
-                        $server = 'localhost';
-                        $username = 'root';
-                        $password = '';
-                        $dbname = 'qrcodedb';
+                        $server = 'remotemysql.com';
+                        $username = 'XnprHCjihw';
+                        $password = 'wI5aIHBVQ8';
+                        $dbname = 'XnprHCjihw';
 
                         $conn = new mysqli(
                             $server,
