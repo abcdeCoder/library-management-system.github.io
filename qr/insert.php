@@ -22,7 +22,7 @@ if($conn->connect_error){
      
     $sql = "INSERT INTO `student`( `STUDENTID`, `FIRSTNAME`, `AGE`, `GENDER`, `CATEGORY`, `DEPARTMENT`) VALUES ('$id','$firstname','$age','$gender','$category','$department')";
 
-    $conn->query($sql) or die($conn-error);
+    $conn->query($sql) or die($conn->error);
 
 echo header("Location:edit.php");
 

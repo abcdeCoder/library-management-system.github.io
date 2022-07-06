@@ -32,7 +32,7 @@ $image = $_POST['image'];
 
 echo $sql1 = "UPDATE `student` SET `STUDENTID`='$tag',`FIRSTNAME`='$firstname',`AGE`='$age',`GENDER`='$gender',`CATEGORY`='$category',`DEPARTMENT`='$department',`dob`='$dob',`phone`='$phone',`image`='$image' WHERE ID = $id ";
 
-$conn->query($sql1) or die($conn-error);
+$conn->query($sql1) or die($conn->error);
 
 // echo header("Location:edit.php");
 
