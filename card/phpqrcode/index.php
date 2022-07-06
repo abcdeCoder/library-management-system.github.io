@@ -56,7 +56,6 @@
         if (trim($_REQUEST['data']) == '')
             die('data cannot be empty! <a href="?">back</a>');
             
-        $_REQUEST['data']='Name:Mohan\r\nClass:10';
         // user data
         $filename = $PNG_TEMP_DIR.'test'.md5($_REQUEST['data'].'|'.$errorCorrectionLevel.'|'.$matrixPointSize).'.png';
         QRcode::png($_REQUEST['data'], $filename, $errorCorrectionLevel, $matrixPointSize, 2);    
@@ -92,4 +91,4 @@
     // benchmark
     QRtools::timeBenchmark();    
 
-    ?>
+    
