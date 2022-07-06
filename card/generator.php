@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 require 'dbconn.php'; ?>
 
@@ -22,9 +24,6 @@ if ($rollno == null) {
     echo header('location:../');
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <title>QR Code Generator</title>
     <link rel='stylesheet'
