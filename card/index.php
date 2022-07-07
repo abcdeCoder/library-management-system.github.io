@@ -23,12 +23,6 @@ if ($rollno == null) {
 }
 ?>
 
-
-
-
-
-
-
 <?php
 // Connect to the Database
 include 'config.php';
