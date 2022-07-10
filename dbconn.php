@@ -1,12 +1,11 @@
 <?php
 session_start();
-$port=8889;
 $dbservername = 'remotemysql.com';
 $dbusername = 'Qhi5r1FFe0';
 $dbpassword = 'UaSlm473Kv';
 $dbdata = 'Qhi5r1FFe0';
 // Create connection
-$conn = mysqli_connect($port,$dbservername, $dbusername, $dbpassword, $dbdata);
+$conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbdata);
 // Check connection
 if (!$conn) {
     echo 'Connected unsuccessfully';
