@@ -1,8 +1,8 @@
 <?php
 session_start();
-$dbservername = 'remotemysql.com';
-$dbusername = 'Qhi5r1FFe0';
-$dbpassword = 'UaSlm473Kv';
+$dbservername = 'sql6.freesqldatabase.com';
+$dbusername = 'sql6505353';
+$dbpassword = 'tefCRS5nNl';
 // Create connection
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword);
 // Check connection

@@ -1,10 +1,10 @@
 <?php
 function connection()
 {
-    $host = 'remotemysql.com';
-    $username = 'Qhi5r1FFe0';
-    $password = 'UaSlm473Kv';
-    $database = 'Qhi5r1FFe0';
+    $host = 'sql6.freesqldatabase.com';
+    $username = 'sql6505353';
+    $password = 'tefCRS5nNl';
+    $database = 'sql6505353';
 
     $con = new mysqli($host, $username, $password, $database);
 
