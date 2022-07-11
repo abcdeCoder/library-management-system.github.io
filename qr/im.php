@@ -1,6 +1,6 @@
  <?php  
 
- $connect = mysqli_connect("localhost", "root", "", "qrcodedb");  
+ $connect = mysqli_connect("sql6.freesqldatabase.com", "sql6505355", "ShzpBJ1xf9", "sql6505355");  
  if(isset($_POST["insert"]))  
  {  
       $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  

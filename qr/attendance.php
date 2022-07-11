@@ -146,10 +146,10 @@ if ($rollno == null) {
                             </thead>
                             <tbody>
                                 <?php
-                        $server = 'localhost';
-                        $username = 'root';
-                        $password = '';
-                        $dbname = 'qrcodedb';
+                        $server = 'sql6.freesqldatabase.com';
+                        $username = 'sql6505355';
+                        $password = 'ShzpBJ1xf9';
+                        $dbname = 'sql6505355';
 
                         $conn = new mysqli(
                             $server,

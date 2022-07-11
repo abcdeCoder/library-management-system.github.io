@@ -1,5 +1,5 @@
 <?php
-$con =mysqli_connect("localhost","root","","image");
+$con =mysqli_connect("sql6.freesqldatabase.com","sql6505355","ShzpBJ1xf9","sql6505355");
 
 if ($con == TRUE) {
 	echo "connected";

@@ -153,13 +153,14 @@ if ($rollno == null) {
                                 <td>TIME OUT</td>
                                 <td>LOGDATE</td>
                             </tr>
-                        </thead>
+                        </thead>                                    
+                        
                         <tbody>
                             <?php
-                        $server = 'remotemysql.com';
-                        $username = 'XnprHCjihw';
-                        $password = 'wI5aIHBVQ8';
-                        $dbname = 'XnprHCjihw';
+                        $server = 'sql6.freesqldatabase.com';
+                        $username = 'sql6505355';                      
+                        $password = 'ShzpBJ1xf9';
+                        $dbname = 'sql6505355';
 
                         $conn = new mysqli(
                             $server,

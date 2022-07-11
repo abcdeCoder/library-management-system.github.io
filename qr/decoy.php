@@ -79,10 +79,10 @@
 </html>
  
 <?php 
-$localhost = "localhost"; #localhost
-$dbusername = "root"; #username of phpmyadmin
-$dbpassword = "";  #password of phpmyadmin
-$dbname = "CodeFlix";  #database name
+$localhost = "sql6.freesqldatabase.com"; #localhost
+$dbusername = "sql6505355"; #username of phpmyadmin
+$dbpassword = "ShzpBJ1xf9";  #password of phpmyadmin
+$dbname = "sql6505355";  #database name
  
 #connection string
 $conn = mysqli_connect($localhost,$dbusername,$dbpassword,$dbname);

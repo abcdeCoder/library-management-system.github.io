@@ -1,9 +1,9 @@
 <?php
 session_start();
- $host = "localhost";
-$username = "root";
-$password = "";
-$database = "qrcodedb";
+ $host = "sql6.freesqldatabase.com";
+$username = "sql6505355";
+$password = "ShzpBJ1xf9";
+$database = "sql6505355";
 
 
  $conn = new mysqli($host,$username,$password,$database);
