@@ -235,7 +235,7 @@ if ($rollno == null) {
         $('#time').html(Date(timestamp));
         timestamp++;
     }
-    $(function() {
+    (function() {
         setInterval(updateTime, 1000);
     });
     </script>
