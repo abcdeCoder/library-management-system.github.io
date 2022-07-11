@@ -103,6 +103,18 @@ if ($rollno == null) {
                 <br>
                 <br>
                 <?php
+                 if (isset($_SESSION['success'])) {
+                    echo "
+                                   <div class='alert alert-success alert-dismissible' style='background:green;color:#fff'>
+                                     <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                                     <h4><i class='icon fa fa-check'></i> Success!</h4>
+                                     " .
+                        $_SESSION['success'] .
+                        "
+                                   </div>
+                                 ";
+                    unset($_SESSION['success']);
+                }
      if (isset($_SESSION['error'])) {
          echo "
 						<div class='alert alert-danger alert-dismissible' style='background:red;color:#fff'>
@@ -114,18 +126,6 @@ if ($rollno == null) {
 						</div>
 					  ";
          unset($_SESSION['error']);
-     }
-     if (isset($_SESSION['success'])) {
-         echo "
-						<div class='alert alert-success alert-dismissible' style='background:green;color:#fff'>
-						  <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-						  <h4><i class='icon fa fa-check'></i> Success!</h4>
-						  " .
-             $_SESSION['success'] .
-             "
-						</div>
-					  ";
-         unset($_SESSION['success']);
      }
      ?>
 
