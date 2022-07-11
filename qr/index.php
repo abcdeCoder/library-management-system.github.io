@@ -228,7 +228,7 @@ if ($rollno == null) {
     });
     </script>
     <script type="text/javascript">
-    date_default_timezone_set('Asia/Manila');
+    // date_default_timezone_set('Asia/Manila');
     var timestamp = '<?= time() ?>';
 
     function updateTime() {
