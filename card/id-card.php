@@ -431,7 +431,7 @@ if (isset($_POST['search'])) {
             </div>
         </div>
         <hr>
-        <button id="demo" class="downloadtable btn btn-primary" onclick="downloadtable()"> Download Id Card</button>
+        <button id="demo" class="downloadtable btn btn-primary" onclick="downloadtable(e)"> Download Id Card</button>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -448,7 +448,7 @@ if (isset($_POST['search'])) {
         <script>
             import domtoimage from 'dom-to-image';
      
-       var downloadtable = () => {
+       var downloadtable = (e) => {
             var node = document.getElementById('mycard');
 
             domtoimage.toPng(node)
