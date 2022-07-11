@@ -446,9 +446,9 @@ if (isset($_POST['search'])) {
         </script>
 
         <script>
+            import domtoimage from 'dom-to-image';
      
         function downloadtable() {
-            import domtoimage from 'dom-to-image';
             var node = document.getElementById('mycard');
 
             domtoimage.toPng(node)
