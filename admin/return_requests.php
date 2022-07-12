@@ -113,12 +113,12 @@ if ($type = $row['Type'] !== 'librarian') { ?>
                         <tbody>
                             <?php
                             $sql =
-                                'select return.BookId,return.RollNo,Textbook,datediff(curdate(),Due_Date) as x from return,book,record where Date_of_Return is NULL and return.BookId=book.BookId and return.BookId=record.BookId and return.RollNo=record.RollNo';
+                                'select sql6505353.return.BookId as booid,sql6505353.return.RollNo as roll,Textbook,datediff(curdate(),Due_Date) as x from sql6505353.return,sql6505353.book,sql6505353.record where Date_of_Return is NULL and sql6505353.return.BookId=sql6505353.book.BookId and sql6505353.return.BookId=sql6505353.record.BookId and sql6505353.return.RollNo=sql6505353.record.RollNo; ';
                             $result = $conn->query($sql);
                             while ($row = $result->fetch_assoc()) {
 
-                                $bookid = $row['BookId'];
-                                $rollno = $row['RollNo'];
+                                $bookid = $row['booid'];
+                                $rollno = $row['roll'];
                                 $name = $row['Textbook'];
                                 $dues = $row['x'];
                                 ?>
