@@ -97,7 +97,7 @@ background-color: #808080;
 	</div>
 
 	<div class="footer w3layouts agileits">
-		<p> &copy; 2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan </a></p>
+		<p> &copy; 2022 LMS Login.<a href="https://www.linkedin.com/in/gaurav-verma-88056a224/">Gaurav Verma</a></p>
 		
 	</div>
 <?php

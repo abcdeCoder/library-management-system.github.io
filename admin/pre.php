@@ -200,7 +200,7 @@ require 'dbconn.php'; ?>
     </div>
     <div class="footer">
         <div class="container">
-            <b class="copyright">&copy; 2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan</b>All rights
+            <b class="copyright">&copy; 2022 LMS Login. <a href="https://www.linkedin.com/in/gaurav-verma-88056a224/">Gaurav Verma</a></b>All rights
             reserved.
         </div>
     </div>
