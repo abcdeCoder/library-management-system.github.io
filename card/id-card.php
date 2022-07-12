@@ -431,7 +431,7 @@ if (isset($_POST['search'])) {
             </div>
         </div>
         <hr>
-        <button id="demo" class="downloadtable btn btn-primary" onclick=downloadtable(this);> Download Id Card</button>
+        <button id="demo" class="downloadtable btn btn-primary"> Download Id Card</button>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -446,23 +446,36 @@ if (isset($_POST['search'])) {
         </script>
 
 <script>
-               var downloadtable;
-            import domtoimage from 'dom-to-image';
+    import domtoimage from 'dom-to-image';
+    var btn = document.getElementById("demo");
+   btn.addEventListener("click", function() {
+      var node = document.getElementById('mycard');
+      domtoimage.toPng(node)
+      .then(function(dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        downloadURI(img.src, "staff-id-card.png")
+      })
+      .catch(function(error) {
+        console.error('oops, something went wrong', error);
+      });
+    }, false);
+               
             
-        downloadtable = function (this) {
-            var node = document.getElementById('mycard');
+        // function downloadtable(this) {
+        //     var node = document.getElementById('mycard');
 
-            domtoimage.toPng(node)
-                .then(function(dataUrl) {
-                    var img = new Image();
-                    img.src = dataUrl;
-                    downloadURI(img.src, "staff-id-card.png")
-                })
-                .catch(function(error) {
-                    console.error('oops, something went wrong', error);
-                });
+        //     domtoimage.toPng(node)
+        //         .then(function(dataUrl) {
+        //             var img = new Image();
+        //             img.src = dataUrl;
+        //             downloadURI(img.src, "staff-id-card.png")
+        //         })
+        //         .catch(function(error) {
+        //             console.error('oops, something went wrong', error);
+        //         });
 
-        }
+        // }
 
 
 
