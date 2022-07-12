@@ -208,7 +208,7 @@ if ($_SESSION['RollNo']== 'admin' ) {
         </div>
 <div class="footer">
             <div class="container">
-                <b class="copyright">&copy; 2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan</b>All rights reserved.
+                <b class="copyright">&copy; 2022 LMS Gaurav Verma</b>All rights reserved.
             </div>
         </div>
         
