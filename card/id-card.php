@@ -432,16 +432,12 @@ if (isset($_POST['search'])) {
         </div>
         <hr>
         <button id="demo" class="downloadtable btn btn-primary"  onclick= "downloadtable(){
-             var node = document.getElementById('mycard');
-
-domtoimage.toPng(node)
-    .then(function(dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        downloadURI(img.src, 'staff-id-card.png')
-    })
-    .catch(function(error) {
-        console.error('oops, something went wrong', error);
+         domtoimage.toJpeg(document.getElementById('mycard'), { quality: 0.95 })
+             .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
     });
         }"> Download Id Card</button>
         <!-- Optional JavaScript -->
