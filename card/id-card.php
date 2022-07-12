@@ -459,7 +459,7 @@ if (isset($_POST['search'])) {
       .catch(function(error) {
         console.error('oops, something went wrong', error);
       });
-    }, false);
+    });
                
             
         // function downloadtable(this) {
