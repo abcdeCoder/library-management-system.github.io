@@ -16,11 +16,11 @@ $sql1 = "update record set Date_of_Return=curdate(),Dues='$dues' where BookId='$
 if ($conn->query($sql1) === true) {
     $sql3 = "update book set Availability=Availability+1 where BookId='$bookid'";
     $result = $conn->query($sql3);
-    $sql4 = "delete from return where BookId='$bookid' and RollNo='$rollno'";
+    $sql4 = "delete from sql6505353.return where BookId='$bookid' and RollNo='$rollno'";
     $result = $conn->query($sql4);
-    $sql6 = "delete from renew where BookId='$bookid' and RollNo='$rollno'";
+    $sql6 = "delete from sql6505353.renew where BookId='$bookid' and RollNo='$rollno'";
     $result = $conn->query($sql6);
-    $sql5 = "insert into message (RollNo,Msg,Date,Time) values ('$rollno','Your request for return of BookId: $bookid  has been accepted',curdate(),curtime())";
+    $sql5 = "insert into sql6505353.message (RollNo,Msg,Date,Time) values ('$rollno','Your request for return of BookId: $bookid  has been accepted',curdate(),curtime())";
     $result = $conn->query($sql5);
     echo "<script type='text/javascript'>alert('Success')</script>";
     header('Refresh:0.01; url=return_requests.php', true, 303);
