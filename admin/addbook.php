@@ -218,20 +218,7 @@ require 'dbconn.php'; ?>
     <script src="scripts/common.js" type="text/javascript"></script>
 
     <?php if (isset($_POST['submit'])) {
-        //    $title=$_POST['title'];
-        //    $author=$_POST['author'];
-        //   $section =$_POST['section'];
-        //    $publisher=$_POST['publisher'];
-        //    $year=$_POST['year'];
-        //    $availability=$_POST['availability'];
-        //    $aut = $_POST['aut'];
-        //    $isbn = $_POST['isbn'];
-        //    $status=$_POST['status'];
-
-        // echo $sql1="insert into LMS.book (Section,Subject,Textbook,Volume,Year,Availability,Author,ISBN,Status) values ('$section',$title','$author','$publisher','$year','$availability','$aut','$isbn','$status')";
-
-        // INSERT INTO `book`(`BookId`, `Section`, `Subject`, `Textbook`, `Volume`, `Year`, `Availability`, `Author`, `ISBN`, `Status`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10])
-
+        
         $Section = $_POST['Section'];
         $Subject = $_POST['Subject'];
         $book = $_POST['book'];
@@ -246,20 +233,9 @@ require 'dbconn.php'; ?>
         $sql1 = "INSERT INTO `book`( `Section`, `Subject`, `Textbook`, `Volume`, `Year`, `Availability`, `Author`, `ISBN`, `Status`) VALUES ('$Section','$Subject','$book','$Title','$Copyright','$availability','$Author','$ISBN','$status')";
 
         if ($conn->query($sql1) === true) {
-            // $sql2 = 'select max(BookId) as x from book';
-            // $result = $conn->query($sql2);
-            // $row = $result->fetch_assoc();
-            // $x=$row['x'];
-            // $sql3="insert into LMS.author values ('$x','$author')";
-            // $result=$conn->query($sql3);
-            // if(!empty($author2))
-            // { $sql4="insert into LMS.author values('$x','$author2')";
-            //   $result=$conn->query($sql4);}
-            // if(!empty($author3))
-            // { $sql5="insert into LMS.author values('$x','$author3')";
-            //   $result=$conn->query($sql5);}
-
+            
             echo "<script type='text/javascript'>alert('Success')</script>";
+            header('Refresh:0.01; url=index.php', true, 303);
         } else {
             //echo $conn->error;
             echo "<script type='text/javascript'>alert('Error')</script>";

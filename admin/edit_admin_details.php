@@ -159,7 +159,7 @@ require 'dbconn.php';
     </div>
     <div class="footer">
         <div class="container">
-            <b class="copyright">&copy;2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan </b>All rights
+            <b class="copyright">&copy;2022 LMS Login. Gaurav Verma </b>All rights
             reserved.
         </div>
     </div>
