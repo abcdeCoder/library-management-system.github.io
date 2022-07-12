@@ -19,8 +19,11 @@ require 'dbconn.php'; ?>
     <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
         rel='stylesheet'>
         <style>
-            .cs{
+            .navbar-inner{
                 background-color: black;
+            }
+            .brand{
+                color: white;
             }
         </style>
 </head>
@@ -30,7 +33,7 @@ require 'dbconn.php'; ?>
         <div class="navbar-inner cs">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                    <i class="icon-reorder shaded"></i></a><a class="brand" href="index.php">LMS </a>
+                    <i class="icon-reorder shaded"></i></a><a  class="brand" href="index.php">LMS </a>
                 <div class="nav-collapse collapse navbar-inverse-collapse">
                     <ul class="nav pull-right">
                         <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
