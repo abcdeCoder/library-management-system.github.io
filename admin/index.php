@@ -20,9 +20,9 @@ require 'dbconn.php'; ?>
         rel='stylesheet'>
         <style>
             .navbar-inner{
-                background-color: black;
+                background: black;
             }
-            .brand{
+            .navbar .brand{
                 color: white;
             }
         </style>
