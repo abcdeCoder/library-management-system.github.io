@@ -14,8 +14,6 @@ require 'dbconn.php'; ?>
     <!-- Meta-Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <meta name="keywords"
         content="Library Member Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
@@ -32,6 +30,8 @@ require 'dbconn.php'; ?>
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
