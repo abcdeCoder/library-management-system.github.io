@@ -10,7 +10,7 @@ require 'dbconn.php'; ?>
 <head>
 
     <title>Library Management </title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
     <!-- Meta-Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
