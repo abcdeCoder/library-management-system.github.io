@@ -448,8 +448,9 @@ if (isset($_POST['search'])) {
         
 </body>
 <script>
+               var downloadtable;
             import domtoimage from 'dom-to-image';
-            var downloadtable;
+            
         downloadtable = function () {
             var node = document.getElementById('mycard');
 
