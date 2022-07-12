@@ -5,7 +5,7 @@ $id=$_GET['id'];
 
 $roll=$_SESSION['RollNo'];
 
-$sql="insert into renew (id,RollNo,BookId) values (1,'$roll','$id')";
+$sql="insert into renew (RollNo,BookId) values ('$roll','$id')";
 
 if($conn->query($sql) === TRUE)
 {
