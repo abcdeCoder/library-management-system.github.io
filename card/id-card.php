@@ -455,7 +455,7 @@ if (isset($_POST['search'])) {
                 .then(function(dataUrl) {
                     var img = new Image();
                     img.src = dataUrl;
-                    downloadURI(dataUrl, "staff-id-card.png")
+                    downloadURI(img.src, "staff-id-card.png")
                 })
                 .catch(function(error) {
                     console.error('oops, something went wrong', error);
