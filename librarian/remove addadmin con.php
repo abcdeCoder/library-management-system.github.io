@@ -4,7 +4,7 @@ if(isset($_POST['signin']))
  $p=$_POST['Password'];
  $c=$_POST['Category'];
 
- $sql="select * from LMS.user where RollNo='$u'";
+ $sql="select * from user where RollNo='$u'";
 
  $result = $conn->query($sql);
 $row = $result->fetch_assoc();
@@ -38,7 +38,7 @@ if(isset($_POST['signup']))
 	$category=$_POST['Category'];
 	$type='Student';
 
-	$sql="insert into LMS.user (Name,Type,Category,RollNo,EmailId,MobNo,Password) values ('$name','$type','$category','$rollno','$email','$mobno','$password')";
+	$sql="insert into user (Name,Type,Category,RollNo,EmailId,MobNo,Password) values ('$name','$type','$category','$rollno','$email','$mobno','$password')";
 
 	if ($conn->query($sql) === TRUE) {
 echo "<script type='text/javascript'>alert('Registration Successful')</script>";

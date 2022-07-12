@@ -11,12 +11,12 @@ $row = $result->fetch_assoc();
 $category = $row['Category'];
 
 if ($category == 'GEN' || $category == 'OBC') {
-    $sql1 = "update LMS.record set Date_of_Issue=curdate(),Due_Date=date_add(curdate(),interval 01 day),Renewals_left=1 where BookId='$bookid' and RollNo='$rollno'";
+    $sql1 = "update record set Date_of_Issue=curdate(),Due_Date=date_add(curdate(),interval 01 day),Renewals_left=1 where BookId='$bookid' and RollNo='$rollno'";
 
     if ($conn->query($sql1) === true) {
-        $sql3 = "update LMS.book set Availability=Availability-1 where BookId='$bookid'";
+        $sql3 = "update book set Availability=Availability-1 where BookId='$bookid'";
         $result = $conn->query($sql3);
-        $sql5 = "insert into LMS.message (RollNo,Msg,Date,Time) values ('$rollno','Your request for issue of BookId: $bookid  has been accepted',curdate(),curtime())";
+        $sql5 = "insert into message (RollNo,Msg,Date,Time) values ('$rollno','Your request for issue of BookId: $bookid  has been accepted',curdate(),curtime())";
         $result = $conn->query($sql5);
         echo "<script type='text/javascript'>alert('Success')</script>";
         header('Refresh:0.01; url=issue_requests.php', true, 303);
@@ -25,12 +25,12 @@ if ($category == 'GEN' || $category == 'OBC') {
         header('Refresh:1; url=issue_requests.php', true, 303);
     }
 } else {
-    $sql2 = "update LMS.record set Date_of_Issue=curdate(),Due_Date=date_add(curdate(),interval 01 day),Renewals_left=1 where BookId='$bookid' and RollNo='$rollno'";
+    $sql2 = "update record set Date_of_Issue=curdate(),Due_Date=date_add(curdate(),interval 01 day),Renewals_left=1 where BookId='$bookid' and RollNo='$rollno'";
 
     if ($conn->query($sql2) === true) {
-        $sql4 = "update LMS.book set Availability=Availability-1 where BookId='$bookid'";
+        $sql4 = "update book set Availability=Availability-1 where BookId='$bookid'";
         $result = $conn->query($sql4);
-        $sql6 = "insert into LMS.message (RollNo,Msg,Date,Time) values ('$rollno','Your request for issue of BookId: $bookid has been accepted',curdate(),curtime())";
+        $sql6 = "insert into message (RollNo,Msg,Date,Time) values ('$rollno','Your request for issue of BookId: $bookid has been accepted',curdate(),curtime())";
         $result = $conn->query($sql6);
         echo "<script type='text/javascript'>alert('Success')</script>";
         header('Refresh:1; url=issue_requests.php', true, 303);

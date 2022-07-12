@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
     $Description=$_POST['Description'];
     $rollno=$_SESSION['RollNo'];
 
-$sql1="insert into LMS.recommendations (Book_Name,Description,RollNo) values ('$title','$Description','$rollno')"; 
+$sql1="insert into recommendations (Book_Name,Description,RollNo) values ('$title','$Description','$rollno')"; 
 
 echo $rollno;
 

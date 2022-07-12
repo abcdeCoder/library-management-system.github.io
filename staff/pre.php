@@ -8,7 +8,7 @@ if ($_SESSION['RollNo'] == false) {
  echo header("Location:nicetry.php");
 }
 $rollno = $_SESSION['RollNo'];
-                                $sql="select * from LMS.user where RollNo='$rollno'";
+                                $sql="select * from user where RollNo='$rollno'";
                                 $result=$conn->query($sql);
                                 $row=$result->fetch_assoc();
                                 
@@ -112,10 +112,10 @@ if ($type =$row['Type'] !== 'librarian') {
                                     <?php
                                     if(isset($_POST['submit']))
                                         {$s=$_POST['title'];
-                                        $sql="select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,datediff(curdate(),Due_Date) as x from LMS.record,LMS.book where (Date_of_Issue and Date_of_Return  and book.Bookid = record.BookId) and (RollNo='$s' or record.BookId='$s' or Textbook like '%$s%')";
+                                        $sql="select record.BookId,id,RollNo,Textbook,Due_Date,Date_of_Issue,datediff(curdate(),Due_Date) as x from record,book where (Date_of_Issue and Date_of_Return  and book.Bookid = record.BookId) and (RollNo='$s' or record.BookId='$s' or Textbook like '%$s%')";
                                         }
                                     else
-                                        $sql="select record.BookId,id,RollNo,Textbook,Date_of_Return,Date_of_Issue,datediff(curdate(),Due_Date) as x from LMS.record,LMS.book where Date_of_Issue and Date_of_Return and book.Bookid = record.BookId";
+                                        $sql="select record.BookId,id,RollNo,Textbook,Date_of_Return,Date_of_Issue,datediff(curdate(),Due_Date) as x from record,book where Date_of_Issue and Date_of_Return and book.Bookid = record.BookId";
                                     $result=$conn->query($sql);
                                     $rowcount=mysqli_num_rows($result);
 

@@ -203,7 +203,7 @@ require 'dbconn.php';
     $mobno = $_POST['MobNo'];
     $pswd = $_POST['Password'];
 
-    $sql1 = "update LMS.user set Name='$name', Category='$category', Department = '$department', EmailId='$email', MobNo='$mobno', Password='$pswd' where RollNo='$rollno'";
+    $sql1 = "update user set Name='$name', Category='$category', Department = '$department', EmailId='$email', MobNo='$mobno', Password='$pswd' where RollNo='$rollno'";
 
     if ($conn->query($sql1) === true) {
         echo "<script type='text/javascript'>alert('Success')</script>";

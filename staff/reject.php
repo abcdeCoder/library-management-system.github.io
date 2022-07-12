@@ -5,7 +5,7 @@ $bookid=$_GET['id1'];
 
 $rollno=$_GET['id2'];
 
-$sql="delete from LMS.record where id='$rollno' and id='$bookid'";
+$sql="delete from record where id='$rollno' and id='$bookid'";
 
 if($conn->query($sql) === TRUE)
 {

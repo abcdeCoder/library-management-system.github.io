@@ -168,7 +168,7 @@ if ($_SESSION['RollNo'] !== 'staff') { ?>
     $Sender = $_POST['Sender'];
     $message = $_POST['Message'];
 
-    $sql1 = "insert into LMS.message (RollNo,Sender,Msg,Date,Time) values ('$rollno','$Sender','$message',curdate(),curtime())";
+    $sql1 = "insert into message (RollNo,Sender,Msg,Date,Time) values ('$rollno','$Sender','$message',curdate(),curtime())";
 
     if ($conn->query($sql1) === true) {
         echo "<script type='text/javascript'>alert('Success')</script>";

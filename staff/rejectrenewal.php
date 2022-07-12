@@ -5,7 +5,7 @@ $bookid=$_GET['id1'];
 
 $rollno=$_GET['id2'];
 
- $sql6="delete from LMS.renew where BookId='$bookid' and RollNo='$rollno'";
+ $sql6="delete from renew where BookId='$bookid' and RollNo='$rollno'";
 
 if($conn->query($sql6) == TRUE)
 

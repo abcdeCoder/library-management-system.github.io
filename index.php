@@ -144,7 +144,7 @@ require 'dbconn.php'; ?>
         $category = $_POST['Category'];
         $department = $_POST['Department'];
         $type = 'Student';
-        $sql = "insert into LMS.user (Name,Type,Category,Department,RollNo,EmailId,MobNo,Password) values ('$name','$type','$category','$department','$rollno','$email','$mobno','$password')";
+        $sql = "insert into user (Name,Type,Category,Department,RollNo,EmailId,MobNo,Password) values ('$name','$type','$category','$department','$rollno','$email','$mobno','$password')";
         if ($conn->query($sql) === true) {
             echo "<script type='text/javascript'>alert('Registration Successful')</script>";
         } else {

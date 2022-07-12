@@ -345,7 +345,7 @@ require 'dbconn.php';
     // $ISBN = $_POST['ISBN'];
     // $status = $_POST['status'];
 
-    $sql1 = "UPDATE lms.book set `stat_id` = '$stat_id'";
+    $sql1 = "UPDATE book set `stat_id` = '$stat_id'";
     $conn->query($sql1) or die($conn->error);
 
     //  // $sql1 = "INSERT INTO `book`( `Section`, `Subject`, `Textbook`, `Volume`, `Year`, `Availability`, `Author`, `ISBN`, `Status`) VALUES ('$Section','$Subject','$book','$Copyright','$Title','$availability','$Author','$ISBN','$status')";
