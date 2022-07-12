@@ -18,10 +18,15 @@ require 'dbconn.php'; ?>
     <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
     <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
         rel='stylesheet'>
+        <style>
+            .cs{
+                background-color: black;
+            }
+        </style>
 </head>
 
 <body>
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top cs">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
