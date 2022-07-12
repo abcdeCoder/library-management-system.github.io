@@ -5,7 +5,7 @@ $id=$_GET['id'];
 
 $roll=$_SESSION['RollNo'];
 
-$sql="insert into return (id,RollNo,BookId) values (1,'$roll','$id')";
+$sql="insert into sql6505353.return(RollNo,BookId) values ('$roll','$id')";
 
 if($conn->query($sql) === TRUE)
 {
