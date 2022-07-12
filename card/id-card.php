@@ -431,7 +431,7 @@ if (isset($_POST['search'])) {
             </div>
         </div>
         <hr>
-        <button id="demo" class="downloadtable btn btn-primary" onclick="downloadtable();"> Download Id Card</button>
+        <button id="demo" class="downloadtable btn btn-primary" onclick="downloadtable(this);"> Download Id Card</button>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -445,13 +445,11 @@ if (isset($_POST['search'])) {
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
         </script>
 
-        
-</body>
 <script>
                var downloadtable;
             import domtoimage from 'dom-to-image';
             
-        downloadtable = function () {
+        downloadtable = function (this) {
             var node = document.getElementById('mycard');
 
             domtoimage.toPng(node)
@@ -477,5 +475,7 @@ if (isset($_POST['search'])) {
             document.body.removeChild(link);
             delete link;
         }
-        </script>
+        </script>    
+</body>
+
 </html>
