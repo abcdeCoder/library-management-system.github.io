@@ -70,7 +70,7 @@ if (isset($_POST['search'])) {
                                                       <p style='font-size: 14px;'>Library Card</p>
                                                   </div>
                                                   <div class='box-3'>
-                                                      <img src='assets/images/gago.jpg' alt=''>
+                                                      <img src='assets/images/gago.png' alt=''>
                                                   </div>
                                               </div>
                                   
