@@ -111,7 +111,10 @@ return confirm('Are you sure you want to delete all Message?'); }
                         </thead>
                         <tbody>
                             <?php
-                                    $rollno = $_SESSION['RollNo'];
+                                     $sqlu =  "SELECT * FROM `user`";
+                                    $resultu = $conn->query($sqlu);
+                                    $rowu = $resultu->fetch_assoc();
+                                    $rollno = $rowu['RollNo'];
                                     $sql = "select * from message where RollNo='$rollno' order by Date DESC,Time DESC";
                                     $result = $conn->query($sql);
                                     while ($row = $result->fetch_assoc()) {
@@ -164,7 +167,7 @@ return confirm('Are you sure you want to delete all Message?'); }
     </div>
     <div class="footer">
         <div class="container">
-            <b class="copyright">&copy; 2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan</b>All rights
+            <b class="copyright">&copy; 2022 LMS Login. Gaurav Verma</b>All rights
             reserved.
         </div>
     </div>
