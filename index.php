@@ -8,9 +8,9 @@ require 'dbconn.php'; ?>
 <!-- Head -->
 
 <head>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <title>Library Management </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Meta-Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,6 @@ require 'dbconn.php'; ?>
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 
     <!-- Fonts -->
@@ -106,7 +105,7 @@ require 'dbconn.php'; ?>
     </div>
 
     <div class="footer w3layouts agileits">
-        <p> &copy; 2022 LMS Login. King A. Albaracin & Mariabil V. Caga-anan </a></p>
+        <p> &copy; 2022 LMS Login. Gaurav Verma </a></p>
 
     </div>
 
