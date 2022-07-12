@@ -431,15 +431,13 @@ if (isset($_POST['search'])) {
             </div>
         </div>
         <hr>
-        <button id="demo" class="downloadtable btn btn-primary"  onclick= "downloadtable(){
-         domtoimage.toJpeg(document.getElementById('mycard'), { quality: 0.95 })
-             .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
-        link.href = dataUrl;
-        link.click();
-    });
-        }"> Download Id Card</button>
+        <button id="demo" class="downloadtable btn btn-primary"  onclick= "downloadtable = ()=>{
+         domtoimage.toJpeg(document.getElementById('mycard'), { quality: 0.95 }).then(function (dataUrl) {
+                                                                                      var link = document.createElement('a');
+                                                                                      link.download = 'my-image-name.jpeg';
+                                                                                      link.href = dataUrl;
+                                                                                      link.click();
+    });}"> Download Id Card</button>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
