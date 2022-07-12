@@ -29,6 +29,8 @@ if ($rollno == null) {
     <title>QR Code | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 
     <script type="text/javascript" src="js/instascan.min.js"></script>
     <!-- DataTables -->

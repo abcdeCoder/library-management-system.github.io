@@ -26,6 +26,8 @@ if ($rollno == null) {
 ?>
 <head>
     <title>QR Code Generator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>

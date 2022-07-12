@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Image Upload Using PHP</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 	<style>
 		body {
 			display: flex;

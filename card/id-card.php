@@ -432,6 +432,8 @@ if (isset($_POST['search'])) {
         </div>
         <hr>
         <button id="demo" class="downloadtable btn btn-primary"  onclick= "downloadtable = ()=>{
+            import domtoimage from 'dom-to-image';
+
          domtoimage.toJpeg(document.getElementById('mycard'), { quality: 0.95 }).then(function (dataUrl) {
                                                                                       var link = document.createElement('a');
                                                                                       link.download = 'my-image-name.jpeg';
@@ -453,7 +455,6 @@ if (isset($_POST['search'])) {
 
 <script>
             //    var downloadtable;
-            import domtoimage from 'dom-to-image';
             
         // downloadtable = function () {
         //     var node = document.getElementById('mycard');
